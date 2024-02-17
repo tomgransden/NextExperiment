@@ -8,9 +8,9 @@ export async function POST(req: NextRequest){
 
     const transporter = nodemailer.createTransport({
         port: 465,
-        host: 'smtp.ionos.co.uk',
+        host: 'smtp here',
         auth: {
-            user: 'Info@elitepropproltd.co.uk',
+            user: 'email here',
             pass: process.env.PASSWORD
         },
         secure: true
@@ -21,8 +21,8 @@ export async function POST(req: NextRequest){
     console.log(body);
 
     const mailData = {
-        from: "thomas@elitepropproltd.co.uk",
-        to: 'Info@elitepropproltd.co.uk',
+        from: "fromemail",
+        to: 'toemail',
         subject: body.subject,
         text: "Yo yo yo"
     }
